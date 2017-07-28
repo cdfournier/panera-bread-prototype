@@ -304,6 +304,7 @@ a.btn-primary.white {
 a.btn-sign-in {
   display: inline-block;
 	width: auto;
+	height: intrinsic;
 	margin: 0;
 	padding: 0.75em 2em;
   border: 1px solid #4c753f;
@@ -633,8 +634,10 @@ nav li.omit {display: block;}
 .user {
   display: none;
   display: inline-flex;
+  align-items: center;
   position: absolute;
   right: 5%;
+  height: inherit;
 }
 .user a.btn-primary {
   margin: 0;
