@@ -1,0 +1,161 @@
+
+
+/* ------------------------------------------
+  BUTTONS
+--------------------------------------------- */
+
+a.btn-primary, a.btn-secondary, a.btn-order-setup {
+  display: inline-block;
+	width: auto;
+	margin: 1em 0 0;
+	padding: 0.75em 2em;
+	border-radius: 4em;
+  font-family: 'Catamaran', sans-serif;
+	font-size: 0.75em;
+	font-weight: 500;
+	text-align: center;
+}
+
+a.btn-primary, a.btn-primary.light {
+  border: 1px solid #757575;
+  color: #4c753f;
+  background-color: transparent;
+}
+
+a.btn-primary.dark {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  background-color: transparent;
+}
+
+a.btn-primary:hover, a.btn-primary:focus {
+  border: 1px solid #4c753f;
+	color: #ffffff;
+	background-color: #4c753f;
+}
+
+a.btn-secondary {
+  border: 1px solid #757575;
+  color: #ffffff;
+  background-color: transparent;
+}
+
+a.btn-secondary:hover, a.btn-secondary:focus {
+  border: 1px solid #ffffff;
+  color: #4c753f;
+  background-color: #ffffff;
+}
+
+a.btn-order-setup {
+  margin: 0;
+  border: 1px solid #4c753f;
+  color: #ffffff;
+  background-color: #4c753f;
+}
+
+a.btn-order-setup:hover, a.btn-order-setup:focus {
+  border: 1px solid #4c753f;
+  color: #4c753f;
+  background-color: #ffffff;
+}
+
+a.btn-play {
+	width: auto;
+	margin: 0;
+	padding: 0;
+  font-family: 'gonzocons';
+	font-size: 3em;
+	text-align: center;
+}
+
+a.btn-play.white {color: #ffffff;}
+
+a.btn-play.white:hover, a.btn-play.white:focus {color: #757575;}
+
+a.btn-play.dark {color: #757575;}
+
+a.btn-play.dark:hover, a.btn-play.dark:focus {color: #ffffff;}
+
+a.btn-more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: initial;
+	margin: 1em 0 0;
+	padding: 0;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+a.btn-more span {
+  display: none;
+  font-family: 'Catamaran', sans-serif;
+	font-size: 0.75em;
+	font-weight: 400;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+a.btn-more:hover span {
+  display: inline-block;
+  padding: 0 1em 0 0;
+}
+
+a.btn-more:before {
+  display: inline-block;
+  padding: 0.5em 0.575em;
+  font-family: 'gonzocons';
+  font-size: 1em;
+  content: "\e94d";
+}
+
+a.btn-more.white {
+  border: 2px solid #ffffff;
+	border-radius: 4em;
+  color: #ffffff;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+
+/* ------------------------------------------
+  BANNER BACKGROUND IMAGE POSITIONING
+--------------------------------------------- */
+
+@media (min-width: 30em) {
+.bg-center-top {background-position: center top;}
+.bg-center-center {background-position: center center;}
+.bg-center-bottom {background-position: center bottom;}
+
+.bg-left-top {background-position: left top;}
+.bg-left-center {background-position: left center;}
+.bg-left-bottom {background-position: left bottom;}
+
+.bg-right-top {background-position: right top;}
+.bg-right-center {background-position: right center;}
+.bg-right-bottom {background-position: right bottom;}}
+
+
+/* ------------------------------------------
+  BANNER DETAILS POSITIONING
+--------------------------------------------- */
+
+@media (min-width: 30em) {
+.left {
+  justify-content: flex-start;
+  text-align: left;
+}
+.center {
+  justify-content: center;
+  text-align: left;
+}
+.right {
+  justify-content: flex-end;
+  text-align: left;
+}}
