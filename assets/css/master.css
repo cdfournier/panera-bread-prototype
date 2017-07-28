@@ -692,6 +692,7 @@ ul.order-setup {
   justify-content: center;
   position: fixed;
   bottom: 6.5vh;
+  left: 0;
   width: 100%;
 	margin: 0;
 	padding: 0;
