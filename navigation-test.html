@@ -18,24 +18,49 @@
 
     <!-- css files local -->
     <link rel="stylesheet" href="assets/css/gonzocons.css">
-    <link rel="stylesheet" href="assets/css/master.css">
+    <link rel="stylesheet" href="assets/css/navigation-test.css">
 
   </head>
 
   <body>
 
     <header class="auto-hide-header">
-      <a id="open-nav" href="#nav-modal"><div id="btn-open-modal" data-icon="m" class="icon open-nav-modal"></div></a>
+      <a id="open-nav" href="#nav-modal" tabindex="0"><div id="btn-open-modal" data-icon="m" class="icon open-nav-modal"></div></a>
       <div class="primary-nav">
-      	<nav>
-      		<ul id="nav-color">
-            <li class="our-menu"><a href="menu-categories.html">Our Menu</a></li>
-            <li><a href="#0">Find a Panera</a></li>
-            <li><a href="#0">Catering</a></li>
-            <li class="menu-item omit"><a href="#0">Panera at Home</a></li>
-            <li><a href="#0">Gift Cards</a></li>
-      		</ul>
-      	</nav>
+        <nav id="a11y-menu" role="navigation">
+          <ul class="nav level-1" role="menubar" aria-hidden="false">
+            <li class="has-subnav" role="menuitem" aria-haspopup="true">
+              <a href="#our-menu">Our Menu</a>
+              <ul class="level-2" data-test="true" aria-hidden="true" role="menu">
+                <div class="menu-categories">
+                  <p>Handpicked&nbsp;&amp;&nbsp;Seasonal</p>
+                  <li role="menuitem"><img src="assets/imgs/site/nav-plant-forward.png" alt="plans"><a href="#0" tabindex="-1">Plant Forward</a></li>
+                  <li role="menuitem"><img src="assets/imgs/site/nav-protein-rich.png" alt="proteins"><a href="#0" tabindex="-1">Protein Rich</a></li>
+                  <li role="menuitem"><img src="assets/imgs/site/nav-better-grains.png" alt="grains"><a href="#0" tabindex="-1">Better Grains</a></li>
+                  <li role="menuitem"><img src="assets/imgs/site/nav-vegetarian.png" alt="vegetables"><a href="#0" tabindex="-1">Vegetarian</a></li>
+                </div>
+                <div class="menu-categories">
+                  <p>Menu Categories</p>
+                  <li role="menuitem"><img class="cat-icon" src="assets/imgs/site/cat-you-pick-2.svg" alt="you pick 2 icon"><a href="#0" tabindex="-1">You Pick 2</a></li>
+                  <li role="menuitem"><img class="cat-icon" src="assets/imgs/site/cat-bakery.svg" alt="bakery icon"><a href="#0" tabindex="-1">Bakery</a></li>
+                  <li role="menuitem"><img class="cat-icon" src="assets/imgs/site/cat-beverages.svg" alt="beverages icon"><a href="#0" tabindex="-1">Beverages</a></li>
+                  <li role="menuitem"><img class="cat-icon" src="assets/imgs/site/cat-salads.svg" alt="salads icon"><a href="#0" tabindex="-1">Salads</a></li>
+                </div>
+                <div class="menu-categories">
+                  <p>&nbsp;</p>
+                  <li role="menuitem"><img class="cat-icon" src="assets/imgs/site/cat-soups.svg" alt="soups icon"><a href="#0" tabindex="-1">Soups</a></li>
+                  <li role="menuitem"><img class="cat-icon" src="assets/imgs/site/cat-sandwiches.svg" alt="sandwiches icon"><a href="#0" tabindex="-1">Sandwiches</a></li>
+                  <li role="menuitem"><img class="cat-icon" src="assets/imgs/site/cat-pastas.svg" alt="pastas icon"><a href="#0" tabindex="-1">Pastas</a></li>
+                  <li role="menuitem"><img class="cat-icon" src="assets/imgs/site/cat-panera-kids.svg" alt="panera kids icon"><a href="#0" tabindex="-1">Panera Kids</a></li>
+                </div>
+              </ul>
+            </li>
+            <li role="menuitem" aria-haspopup="false"><a href="#0">Find a Panera</a></li>
+            <li role="menuitem" aria-haspopup="false"><a href="#0">Catering</a></li>
+            <li role="menuitem" aria-haspopup="false"><a href="#0">Panera at Home</a></li>
+            <li role="menuitem" aria-haspopup="false"><a href="#0">Gift Cards</a></li>
+          </ul>	
+        </nav>
       	<div class="logo"><a href="index.html"><img src="assets/imgs/site/logo.svg" alt="Panera Bread logo"></a></div>    
         <div class="user"><a href="#0" class="btn-sign-in">Sign In</a></div>
         <div class="user is-authenticated">
@@ -183,14 +208,31 @@
 
       <div class="modal-content">
         <nav id="nav-modal" role="navigation">
-        	<ul>
-            <li class="our-menu"><a href="menu-categories.html">Our Menu</a></li>
-            <li><a href="#0" class="icon close-nav-modal">Find a Panera</a></li>
-            <li><a href="#0" class="icon close-nav-modal">Catering</a></li>
-            <li><a href="#0" class="icon close-nav-modal">Panera at Home</a></li>
-            <li><a href="#0" class="icon close-nav-modal">Gift Cards</a></li>
-            <li><a href="#0" class="icon close-nav-modal btn-sign-in">Sign In</a></li>
-        	</ul>
+          <ul class="nav level-1" role="menubar" aria-hidden="false">
+            <li class="has-subnav" role="menuitem" aria-haspopup="true">
+              <a href="#our-menu" tabindex="-1">Our Menu</a>
+              <ul class="level-2" data-test="true" aria-hidden="true" role="menu">
+                <p>Handpicked&nbsp;&amp;&nbsp;Seasonal</p>
+                <li role="menuitem"><img src="assets/imgs/site/nav-plant-forward.png" alt="plans"><a href="#0" tabindex="-1">Plant Forward</a></li>
+                <li role="menuitem"><img src="assets/imgs/site/nav-protein-rich.png" alt="proteins"><a href="#0" tabindex="-1">Protein Rich</a></li>
+                <li role="menuitem"><img src="assets/imgs/site/nav-better-grains.png" alt="grains"><a href="#0" tabindex="-1">Better Grains</a></li>
+                <li role="menuitem"><img src="assets/imgs/site/nav-vegetarian.png" alt="vegetables"><a href="#0" tabindex="-1">Vegetarian</a></li>
+                <p>Menu Categories</p>
+                <li role="menuitem"><img class="cat-icon" src="assets/imgs/site/cat-you-pick-2.svg" alt="you pick 2 icon"><a href="#0" tabindex="-1">You Pick 2</a></li>
+                <li role="menuitem"><img class="cat-icon" src="assets/imgs/site/cat-bakery.svg" alt="bakery icon"><a href="#0" tabindex="-1">Bakery</a></li>
+                <li role="menuitem"><img class="cat-icon" src="assets/imgs/site/cat-beverages.svg" alt="beverages icon"><a href="#0" tabindex="-1">Beverages</a></li>
+                <li role="menuitem"><img class="cat-icon" src="assets/imgs/site/cat-salads.svg" alt="salads icon"><a href="#0" tabindex="-1">Salads</a></li>
+                <li role="menuitem"><img class="cat-icon" src="assets/imgs/site/cat-soups.svg" alt="soups icon"><a href="#0" tabindex="-1">Soups</a></li>
+                <li role="menuitem"><img class="cat-icon" src="assets/imgs/site/cat-sandwiches.svg" alt="sandwiches icon"><a href="#0" tabindex="-1">Sandwiches</a></li>
+                <li role="menuitem"><img class="cat-icon" src="assets/imgs/site/cat-pastas.svg" alt="pastas icon"><a href="#0" tabindex="-1">Pastas</a></li>
+                <li role="menuitem"><img class="cat-icon" src="assets/imgs/site/cat-panera-kids.svg" alt="panera kids icon"><a href="#0" tabindex="-1">Panera Kids</a></li>
+              </ul>
+            </li>
+            <li role="menuitem" aria-haspopup="false"><a href="#0">Find a Panera</a></li>
+            <li role="menuitem" aria-haspopup="false"><a href="#0">Catering</a></li>
+            <li role="menuitem" aria-haspopup="false"><a href="#0">Panera at Home</a></li>
+            <li role="menuitem" aria-haspopup="false"><a href="#0">Gift Cards</a></li>
+          </ul>	
           <div id="btn-close-modal" data-icon="j" class="icon close-nav-modal" aria-label="close"></div>
         </nav>
       </div>
@@ -205,6 +247,7 @@
     <script src="assets/scripts/animatedModal.js"></script>
     <script src="assets/scripts/navigation.js"></script>
     <script src="assets/scripts/custom.js"></script>
+    <script src="assets/scripts/index.js"></script>
 
   </body>
 </html>
