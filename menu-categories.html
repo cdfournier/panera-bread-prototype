@@ -24,18 +24,18 @@
 
   <body>
 
-    <header class="auto-hide-header" style="background-color: #ffffff;">
+    <header class="auto-hide-header">
       <a id="open-nav" href="#nav-modal"><div id="btn-open-modal" data-icon="m" class="icon open-nav-modal"></div></a>
       <div class="primary-nav">
-      	<nav>
-      		<ul id="nav-color">
-            <li><a href="#0">Our Menu</a></li>
+        <nav id="nav-color">
+          <ul>
+            <li><a id="open-nav-wide" href="#nav-modal-wide">Our Menu</a></li>
             <li><a href="#0">Find a Panera</a></li>
             <li><a href="#0">Catering</a></li>
-            <li class="menu-item omit"><a href="#0">Panera at Home</a></li>
+            <li><a href="#0">Panera at Home</a></li>
             <li><a href="#0">Gift Cards</a></li>
-      		</ul>
-      	</nav>
+          </ul>
+        </nav>
       	<div class="logo"><a href="index.html"><img src="assets/imgs/site/logo.svg" alt="Panera Bread logo"></a></div>    
         <div class="user"><a href="#0" class="btn-sign-in">Sign In</a></div>
         <div class="user is-authenticated">
@@ -43,26 +43,12 @@
           <div class="rewards"><a href="#0">3 Rewards&nbsp;<span class="icon-award"></span></a></div>
         </div>
       </div>
-    	<div class="secondary-nav">
-  			<div id="dd" class="category-navigation" tabindex="1">
-  				<span>Salads</span>
-  				<ul class="dropdown">
-  					<li><a href="#0">Bakery</a></li>
-  					<li><a href="#0">Beverages</a></li>
-  					<li><a href="#0">Breakfast</a></li>
-  					<li><a href="#0">Panera Kids</a></li>
-  					<li><a href="#0">Pastas</a></li>
-  					<li><a href="#0">Salads</a></li>
-  					<li><a href="#0">Sandwiches</a></li>
-  					<li><a href="#0">Soups</a></li>
-  				</ul>
-  			</div>
-    	</div>
     </header>
 
-    <main class="content" style="position: relative; top: 9em;">
+    <main class="content" style="position: relative; top: 6em;">
 
       <section class="category-description bg light">
+        <h1 class="text-dark-green">Salads</h1>
         <p class="text-medium-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in nulla magna. Fusce eget tempus tellus. Fusce ac eros id mi egestas posuere vel sed eros. Nunc tempus diam nec nisl fermentum cursus. In maximus felis nisl, eu auctor dui molestie sit amet.</p>
       </section>
 
@@ -207,15 +193,71 @@
 
       <div class="modal-content">
         <nav id="nav-modal" role="navigation">
+          <form>
+            <div class="field">
+              <input type="search" name="search" id="search" placeholder="Search">
+            </div>
+          </form>
         	<ul>
-            <li><a href="#0">Our Menu</a></li>
+            <li>
+              <ul class="menu-categories">
+                <p>Handpicked&nbsp;&amp;&nbsp;Seasonal Menus</p>
+                <li><img src="assets/imgs/site/nav-plant-forward.png" alt="plans"><a href="#0" class="icon close-nav-modal">Plant Forward</a></li>
+                <li><img src="assets/imgs/site/nav-protein-rich.png" alt="proteins"><a href="#0" class="icon close-nav-modal">Protein Rich</a></li>
+                <li><img src="assets/imgs/site/nav-better-grains.png" alt="grains"><a href="#0" class="icon close-nav-modal">Better Grains</a></li>
+                <li><img src="assets/imgs/site/nav-vegetarian.png" alt="vegetables"><a href="#0" class="icon close-nav-modal">Vegetarian</a></li>
+              </ul>
+              <ul class="menu-categories">
+                <p>Menu Categories</p>
+                <li><img class="cat-icon" src="assets/imgs/site/cat-you-pick-2.svg" alt="you pick 2 icon"><a href="#0">You Pick 2</a></li>
+                <li><img class="cat-icon" src="assets/imgs/site/cat-bakery.svg" alt="bakery icon"><a href="#0">Bakery</a></li>
+                <li><img class="cat-icon" src="assets/imgs/site/cat-beverages.svg" alt="beverages icon"><a href="#0">Beverages</a></li>
+                <li><img class="cat-icon" src="assets/imgs/site/cat-salads.svg" alt="salads icon"><a href="menu-categories.html">Salads</a></li>
+                <li><img class="cat-icon" src="assets/imgs/site/cat-soups.svg" alt="soups icon"><a href="#0">Soups</a></li>
+                <li><img class="cat-icon" src="assets/imgs/site/cat-sandwiches.svg" alt="sandwiches icon"><a href="#0">Sandwiches</a></li>
+                <li><img class="cat-icon" src="assets/imgs/site/cat-pastas.svg" alt="pastas icon"><a href="#0">Pastas</a></li>
+                <li><img class="cat-icon" src="assets/imgs/site/cat-panera-kids.svg" alt="panera kids icon"><a href="#0">Panera Kids</a></li>
+              </ul>
+            </li>
             <li><a href="#0" class="icon close-nav-modal">Find a Panera</a></li>
             <li><a href="#0" class="icon close-nav-modal">Catering</a></li>
             <li><a href="#0" class="icon close-nav-modal">Panera at Home</a></li>
             <li><a href="#0" class="icon close-nav-modal">Gift Cards</a></li>
-            <li><a href="#0" class="icon close-nav-modal btn-sign-in">Sign In</a></li>
         	</ul>
           <div id="btn-close-modal" data-icon="j" class="icon close-nav-modal" aria-label="close"></div>
+        </nav>
+      </div>
+
+      <div class="modal-content">
+        <nav id="nav-modal-wide" role="navigation">
+          <form>
+            <div class="field">
+              <input type="search" name="search" id="search" placeholder="Search">
+            </div>
+          </form>
+        	<ul>
+            <li>
+              <ul class="menu-categories">
+                <p>Handpicked&nbsp;&amp;&nbsp;Seasonal Menus</p>
+                <li><img src="assets/imgs/site/nav-plant-forward.png" alt="plans"><a href="#0" class="icon close-nav-modal">Plant Forward</a></li>
+                <li><img src="assets/imgs/site/nav-protein-rich.png" alt="proteins"><a href="#0" class="icon close-nav-modal">Protein Rich</a></li>
+                <li><img src="assets/imgs/site/nav-better-grains.png" alt="grains"><a href="#0" class="icon close-nav-modal">Better Grains</a></li>
+                <li><img src="assets/imgs/site/nav-vegetarian.png" alt="vegetables"><a href="#0" class="icon close-nav-modal">Vegetarian</a></li>
+              </ul>
+              <ul class="menu-categories">
+                <p>Menu Categories</p>
+                <li><img class="cat-icon" src="assets/imgs/site/cat-you-pick-2.svg" alt="you pick 2 icon"><a href="#0">You Pick 2</a></li>
+                <li><img class="cat-icon" src="assets/imgs/site/cat-bakery.svg" alt="bakery icon"><a href="#0">Bakery</a></li>
+                <li><img class="cat-icon" src="assets/imgs/site/cat-beverages.svg" alt="beverages icon"><a href="#0">Beverages</a></li>
+                <li><img class="cat-icon" src="assets/imgs/site/cat-salads.svg" alt="salads icon"><a href="menu-categories.html">Salads</a></li>
+                <li><img class="cat-icon" src="assets/imgs/site/cat-soups.svg" alt="soups icon"><a href="#0">Soups</a></li>
+                <li><img class="cat-icon" src="assets/imgs/site/cat-sandwiches.svg" alt="sandwiches icon"><a href="#0">Sandwiches</a></li>
+                <li><img class="cat-icon" src="assets/imgs/site/cat-pastas.svg" alt="pastas icon"><a href="#0">Pastas</a></li>
+                <li><img class="cat-icon" src="assets/imgs/site/cat-panera-kids.svg" alt="panera kids icon"><a href="#0">Panera Kids</a></li>
+              </ul>
+            </li>
+        	</ul>
+          <div id="btn-close-modal" data-icon="j" class="icon close-nav-modal-wide" aria-label="close"></div>
         </nav>
       </div>
 
@@ -229,50 +271,6 @@
     <script src="assets/scripts/animatedModal.js"></script>
     <script src="assets/scripts/navigation.js"></script>
     <script src="assets/scripts/custom.js"></script>
-		<script>
-			function DropDown(el) {
-				this.dd = el;
-				this.placeholder = this.dd.children('span');
-				this.opts = this.dd.find('ul.dropdown > li');
-				this.val = '';
-				this.index = -1;
-				this.initEvents();
-			}
-			DropDown.prototype = {
-				initEvents : function() {
-					var obj = this;
-
-					obj.dd.on('click', function(event){
-						$(this).toggleClass('active');
-						return false;
-					});
-
-					obj.opts.on('click',function(){
-						var opt = $(this);
-						obj.val = opt.text();
-						obj.index = opt.index();
-						obj.placeholder.text(obj.val);
-					});
-				},
-				getValue : function() {
-					return this.val;
-				},
-				getIndex : function() {
-					return this.index;
-				}
-			}
-
-			$(function() {
-
-				var dd = new DropDown( $('#dd') );
-
-				$(document).click(function() {
-					// all dropdowns
-					$('.category-navigation').removeClass('active');
-				});
-
-			});
-		</script>
 
   </body>
 </html>
