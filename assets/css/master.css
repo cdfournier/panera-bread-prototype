@@ -985,21 +985,17 @@ ul.order-setup li.desktop:nth-of-type(2) {
   width: 25%;
   border-left: none;
 }
-ul.order-setup li.desktop a {
-  color: #ffffff;
+ul.order-setup li.desktop a {color: #ffffff;}
+ul.order-setup li.desktop a .before {
+  opacity: 1;
   transform: translateY(0);
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-ul.order-setup li.desktop a:hover, ul.order-setup li.desktop a:focus {color: #404143;}
-/*
-ul.order-setup li.desktop.start a:hover, ul.order-setup li.desktop.start a:focus {
-  opacity: 0;
-  transform: translateY(-4em);
-}
-ul.order-setup li.desktop.moved a {
+ul.order-setup li.desktop a .after {
+  height: 0;
   color: #404143;
   opacity: 0;
   transform: translateY(4em);
@@ -1008,11 +1004,16 @@ ul.order-setup li.desktop.moved a {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-ul.order-setup li.desktop.moved a:hover, ul.order-setup li.desktop.moved a:focus {
+ul.order-setup li.desktop a:hover .before, ul.order-setup li.desktop a:focus .before {
+  height: 0;
   opacity: 0;
+  transform: translateY(-6em);
+}
+ul.order-setup li.desktop a:hover .after, ul.order-setup li.desktop a:focus .after {
+  height: initial;
+  opacity: 1;
   transform: translateY(0);
 }
-*/
 ul.order-setup li.desktop h2 {font-weight: 300;}
 ul.order-setup.expand {
   width: 100%;
