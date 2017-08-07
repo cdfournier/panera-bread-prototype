@@ -8,11 +8,15 @@ $("#open-nav").animatedModal({
 });
 
 $("#open-nav-wide").animatedModal({
-  modalTarget:'nav-modal-wide',
+  modalTarget:'nav-modal',
   animatedIn:'slideInLeft',
   animatedOut:'slideOutLeft',
   color:'#ffffff'
 });
+
+
+// Change focus to modal
+
 
 //Pin Order Setup Bar
 $.fn.isOnScreen = function () {
@@ -37,6 +41,7 @@ $(window).scroll(function () {
         $('.order-setup').removeClass('expand');
     }
 });
+
 
 // Adaptive Color
 var stickyOffset = $("#btn-open-modal.open-nav-modal, #nav-color li a, .user a.btn-primary").offset();
