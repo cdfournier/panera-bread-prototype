@@ -47,13 +47,66 @@
 
     <main class="content">
 
-      <section id="salads" class="bg light">
+    	<nav id="cd-vertical-nav">
+    		<ul>
+    			<li>
+    				<a href="#salads" data-number="1">
+    					<span class="cd-dot"></span>
+    					<span class="cd-label">Salads</span>
+    				</a>
+    			</li>
+    			<li>
+    				<a href="#soups" data-number="2">
+    					<span class="cd-dot"></span>
+    					<span class="cd-label">Soups</span>
+    				</a>
+    			</li>
+    			<li>
+    				<a href="#beverages" data-number="3">
+    					<span class="cd-dot"></span>
+    					<span class="cd-label">Craft Beverages</span>
+    				</a>
+    			</li>
+    		</ul>
+    	</nav>
+
+      <section id="salads" class="bg light cd-section">
         <div class="banner-tall bg-left-top" style="background-image: url(assets/imgs/site/modern-greek-with-quinoa.jpg)">
           <div class="banner-details-outer left">
             <div class="banner-details-inner">
               <h1 class="text-black">Salads</h1>
               <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices neque magna, nec sagittis quam bibendum nec.</p>
-              <a href="#0" class="btn-primary green">
+              <a href="menu-categories.html" class="btn-primary green">
+                <span class="icon-arrow-right"></span>
+                <div class="btn-text">Learn more</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="soups" class="bg dark cd-section">
+        <div class="banner-tall bg-left-top" style="background-image: url(assets/imgs/site/todays-soup.jpg)">
+          <div class="banner-details-outer left">
+            <div class="banner-details-inner">
+              <h1 class="text-white">Today's Soup</h1>
+              <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices neque magna, nec sagittis quam bibendum nec.</p>
+              <a href="menu-categories.html" class="btn-primary white">
+                <span class="icon-arrow-right"></span>
+                <div class="btn-text">Learn more</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="beverages" class="bg light cd-section">
+        <div class="banner-tall bg-left-top" style="background-image: url(assets/imgs/site/craft-beverages.jpg)">
+          <div class="banner-details-outer left">
+            <div class="banner-details-inner">
+              <h1 class="text-black">Craft Beverages</h1>
+              <p class="text-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices neque magna, nec sagittis quam bibendum nec.</p>
+              <a href="menu-categories.html" class="btn-primary green">
                 <span class="icon-arrow-right"></span>
                 <div class="btn-text">Learn more</div>
               </a>
@@ -239,6 +292,7 @@
     <!-- scripts local -->
     <script src="assets/scripts/animatedModal.js"></script>
     <script src="assets/scripts/navigation.js"></script>
+    <script src="assets/scripts/vertical.js"></script>
     <script src="assets/scripts/custom.js"></script>
 
   </body>

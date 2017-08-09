@@ -32,13 +32,28 @@ $.fn.isOnScreen = function () {
     bounds.bottom = bounds.top + this.outerHeight();
     return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
 };
-
 $(window).scroll(function () {
     if ($('#footer').isOnScreen() == true) {
         $('.order-setup').addClass('expand');
     }
     else{
         $('.order-setup').removeClass('expand');
+    }
+});
+$(window).scroll(function () {
+    if ($('#feature').isOnScreen() == true) {
+        $('#cd-vertical-nav').addClass('hidden');
+    }
+    else
+      if ($('#services').isOnScreen() == true) {
+          $('#cd-vertical-nav').addClass('hidden');
+      }
+      else
+        if ($('#footer').isOnScreen() == true) {
+            $('#cd-vertical-nav').addClass('hidden');
+        }
+    else{
+        $('#cd-vertical-nav').removeClass('hidden');
     }
 });
 
