@@ -1478,7 +1478,7 @@ blockquote.short {padding: 2em;}}
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  padding: 0 2em;
+  padding: 6em 2em 2em;
 	text-align: center;
 }
 
@@ -1488,6 +1488,10 @@ blockquote.short {padding: 2em;}}
 }
 
 .category-description p {font-size: 0.875em;}
+
+@media (min-width: 48em) {.category-description {padding: 6em 6em 2em;}}
+
+@media (min-width: 64em) {.category-description {padding: 6em 10em 2em;}}
 
 
 /* ------------------------------------------
@@ -1845,7 +1849,7 @@ blockquote.short {padding: 2em;}}
 
 .profile-header-avatar {
   display: block;
-  width: 20%;
+  width: 4em;
   margin: 0;
   padding: 0;
 }
@@ -1858,10 +1862,7 @@ blockquote.short {padding: 2em;}}
 @media (min-width: 48em) {
 .profile-header {flex-direction: column-reverse;}
 .profile-header-details {text-align: center;}
-.profile-header-avatar {
-  width: 10%;
-  margin: 0 0 1em;
-}}
+.profile-header-avatar {margin: 0 0 1em;}}
 
 
 /* ------------------------------------------
