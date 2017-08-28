@@ -1999,6 +1999,8 @@ blockquote.short {padding: 2em;}}
 .profile-header-details {text-align: center;}
 .profile-header-avatar {margin: 0 0 1em;}}
 
+@media (min-width: 64em) {.profile-header {padding: 8em 2em 2em;}}
+
 
 /* ------------------------------------------
   PROFILE DATA
