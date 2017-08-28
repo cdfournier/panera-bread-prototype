@@ -136,40 +136,40 @@ img {
 /*
   Light Green
   color: #e9f0e5;
-  
+
   Medium Green
-  color: #6b9f62;
-  
+  color: #7a9c34;
+
   Dark Green
   color: #4c753f;
-  
+
   Warm Grey
   color: #f9faf7;
-  
+
   Light Grey
   color: #ebebeb;
-  
+
   Medium Grey
   color: #6f6f75;
-  
+
   Dark Grey
   color: #35383d;
-  
+
   Deactivated Grey
   color: #949499;
-  
+
   Black
   color: #1b2314;
-  
+
   White
   color: #ffffff;
-  
+
   Error Red
   color: #e24844;
 */
 
 .text-light-green {color: #e9f0e5;}
-.text-medium-green {color: #6b9f62;}
+.text-medium-green {color: #7a9c34;}
 .text-dark-green {color: #4c753f;}
 .text-warm-grey {color: #f9faf7;}
 .text-light-grey {color: #ebebeb;}
@@ -180,7 +180,7 @@ img {
 .text-white {color: #ffffff;}
 
 .background-light-green {background-color: #e9f0e5;}
-.background-medium-green {background-color: #6b9f62;}
+.background-medium-green {background-color: #7a9c34;}
 .background-dark-green {background-color: #4c753f;}
 .background-warm-grey {background-color: #f9faf7;}
 .background-light-grey {background-color: #ebebeb;}
@@ -858,7 +858,7 @@ ul.order-setup.expand {
   bottom: 0;
   padding: 2em;
   border-bottom: 1px solid #4c753f;
-  background-color: #6b9f62;
+  background-color: #7a9c34;
 }
 
 ul.order-setup.expand li.mobile {width: 100%;}
@@ -876,7 +876,7 @@ ul.order-setup.expand li.mobile a.btn-order-setup {
   letter-spacing: -0.8px;
   line-height: 1;
 	text-align: left;
-  background-color: #6b9f62;
+  background-color: #7a9c34;
 }
 
 ul.order-setup.expand li.mobile a.btn-order-setup:hover, ul.order-setup.expand li.mobile a.btn-order-setup:focus {color: #35383d;}
@@ -956,7 +956,7 @@ ul.order-setup.expand {
   height: 6em;
   border-bottom: 1px solid #4c753f;
   font-size: 100%;
-  background-color: #6b9f62;
+  background-color: #7a9c34;
 }
 ul.order-setup.expand li.desktop {border-color: #4c753f;}
 ul.order-setup.expand li.desktop h2 {text-align: left;}}
@@ -971,7 +971,7 @@ footer {
   width: 100%;
   margin: 0;
   padding: 1em 2em 2em;	
-  background-color: #6b9f62;
+  background-color: #7a9c34;
 }
 
 
@@ -1990,7 +1990,7 @@ blockquote.short {padding: 2em;}}
 }
 
 .profile-header-avatar img {
-  border: 1px solid #6b9f62;
+  border: 1px solid #7a9c34;
   border-radius: 50%;
 }
 
