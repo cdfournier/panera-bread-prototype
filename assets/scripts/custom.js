@@ -46,7 +46,7 @@ $(document).scroll(function() {
     var _thisOffset = $(this).offset();
     var _actPosition = _thisOffset.top - $(window).scrollTop();
     if (_actPosition < stickyOffset.top && _actPosition + $(this).height() > 0) {
-      $("#btn-open-modal.open-nav-modal, #nav-color li a, .user a.btn-sign-in, .user.is-authenticated .name a, .user.is-authenticated .rewards a, .user.is-authenticated .name a span.icon-dribbble, .user.is-authenticated .rewards a span.icon-award").removeClass("light dark").addClass($(this).hasClass("light") ? "light" : "dark");
+      $("#btn-open-modal.open-nav-modal, #nav-color li a, .user a.btn-sign-in, .user.is-authenticated .name a, .user.is-authenticated .rewards a, .user.is-authenticated .name a span.icon-my-information, .user.is-authenticated .rewards a span.icon-rewards").removeClass("light dark").addClass($(this).hasClass("light") ? "light" : "dark");
       return false;
     }
   });

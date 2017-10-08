@@ -76,6 +76,81 @@
 
 
 /* ------------------------------------------
+  PANERA ICON FONT
+--------------------------------------------- */
+
+@font-face {
+  font-family: 'panera';
+  src: url('../fonts/panera/panera.eot?46653855');
+  src: url('../fonts/panera/panera.eot?46653855#iefix') format('embedded-opentype'),
+    url('../fonts/panera/panera.woff2?46653855') format('woff2'),
+    url('../fonts/panera/panera.woff?46653855') format('woff'),
+    url('../fonts/panera/panera.ttf?46653855') format('truetype'),
+    url('../fonts/panera/panera.svg?46653855#panera') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+ 
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "panera";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-arrow:before { content: '\e800'; }
+.icon-close:before { content: '\e801'; }
+.icon-my-information:before { content: '\e802'; }
+.icon-navigation:before { content: '\e803'; }
+.icon-rewards:before { content: '\e804'; }
+.icon-search:before { content: '\e805'; }
+.icon-catering:before { content: '\e806'; }
+.icon-delivery:before { content: '\e807'; }
+.icon-order-from-table:before { content: '\e808'; }
+.icon-rapid-pick-up:before { content: '\e809'; }
+.icon-facebook:before { content: '\e80a'; }
+.icon-foursquare:before { content: '\e80b'; }
+.icon-instagram:before { content: '\e80c'; }
+.icon-pinterest:before { content: '\e80d'; }
+.icon-twitter:before { content: '\e80e'; }
+.icon-youtube:before { content: '\e80f'; }
+.icon-bakery:before { content: '\e810'; }
+.icon-breakfast:before { content: '\e811'; }
+.icon-drinks:before { content: '\e812'; }
+.icon-panera-kids:before { content: '\e813'; }
+.icon-pasta:before { content: '\e814'; }
+.icon-salads:before { content: '\e815'; }
+.icon-sandwiches:before { content: '\e816'; }
+.icon-soups:before { content: '\e817'; }
+.icon-you-pick-2:before { content: '\e818'; }
+.icon-vegetarian:before { content: '\e819'; }
+.icon-plant-forward:before { content: '\e81a'; }
+
+
+/* ------------------------------------------
   BASE SITE STYLES
 --------------------------------------------- */
 
@@ -138,7 +213,7 @@ img {
   color: #e9f0e5;
 
   Medium Green
-  color: #7a9c34;
+  color: #6b9f62;
 
   Dark Green
   color: #4c753f;
@@ -169,7 +244,7 @@ img {
 */
 
 .text-light-green {color: #e9f0e5;}
-.text-medium-green {color: #7a9c34;}
+.text-medium-green {color: #6b9f62;}
 .text-dark-green {color: #4c753f;}
 .text-warm-grey {color: #f9faf7;}
 .text-light-grey {color: #ebebeb;}
@@ -180,7 +255,7 @@ img {
 .text-white {color: #ffffff;}
 
 .background-light-green {background-color: #e9f0e5;}
-.background-medium-green {background-color: #7a9c34;}
+.background-medium-green {background-color: #6b9f62;}
 .background-dark-green {background-color: #4c753f;}
 .background-warm-grey {background-color: #f9faf7;}
 .background-light-grey {background-color: #ebebeb;}
@@ -312,7 +387,7 @@ span.icon-home, span.icon-linkedin, span.icon-location {
   color: #4c753f;
 }
 
-span.icon-cart, span.icon-performance, span.icon-project, span.icon-portfolio {
+span.icon-rapid-pick-up, span.icon-delivery, span.icon-order-from-table, span.icon-catering {
   display: block;
   margin-bottom: 0.125em;
   font-size: 2em;
@@ -340,6 +415,26 @@ a.btn-primary {
   display: inline-flex;
   align-items: center;
   width: auto;
+	height: 2.5em;
+	overflow: hidden;
+	margin: 1em 0 0;
+	padding: 0;
+	border-radius: 4em;
+  font-family: 'calibre-regular', sans-serif;
+	font-size: 1em;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	cursor: pointer;
+	-webkit-transition: max-width 0.3s;
+	-moz-transition: max-width 0.3s;
+	transition: max-width 0.3s;
+}
+
+.no-touch a.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  width: auto;
   max-width: 2.5em;
 	height: 2.5em;
 	overflow: hidden;
@@ -357,16 +452,23 @@ a.btn-primary {
 	transition: max-width 0.3s;
 }
 
-a.btn-primary:hover, a.btn-primary:focus {max-width: 100%;}
+.no-touch a.btn-primary:hover, a.btn-primary:focus {max-width: 100%;}
+
+.no-touch a.btn-primary:hover .btn-text, a.btn-primary:focus .btn-text {transform: translateY(0.15em);}
 
 a.btn-primary.centered {margin: 1em auto 0;}
 
-a.btn-primary .icon-right, a.btn-primary .icon-arrow-right, a.btn-primary .icon-youtube {
+a.btn-primary .icon-right, a.btn-primary .icon-arrow, a.btn-primary .icon-youtube {
+  padding: 0.25em 0 0 0.325em;
   font-size: 1.5em;
-  padding: 0 0 0 0.25em;
 }
 
 a.btn-primary .btn-text {
+  padding: 0.25em 1em 0 0.5em;
+  text-align: left;
+}
+
+.no-touch a.btn-primary .btn-text {
   padding: 0 1em 0 0.5em;
   text-align: left;
   transform: translateY(4em);
@@ -376,7 +478,7 @@ a.btn-primary .btn-text {
   transition: all 0.2s ease;
 }
 
-a.btn-primary:hover .btn-text, a.btn-primary:focus .btn-text {transform: translateY(0.15em);}
+.no-touch a.btn-primary:hover .btn-text, a.btn-primary:focus .btn-text {transform: translateY(0.15em);}
 
 a.btn-primary.green {
   border: 1px solid #4c753f;
@@ -617,7 +719,12 @@ a#open-nav, #btn-close-modal {
 
 /* #nav-modal ul.menu-categories li:last-of-type, #nav-modal-wide ul.menu-categories li:last-of-type {border: none;} */
 
-#nav-modal ul.menu-categories li a {font-weight: 500;}
+#nav-modal ul.menu-categories li a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 500;
+}
 
 #nav-modal ul.menu-categories p {
 	margin: 0;
@@ -631,6 +738,11 @@ a#open-nav, #btn-close-modal {
 	text-transform: uppercase;
 	color: #6f6f75;
 	column-span: all;
+}
+
+span.icon-you-pick-2, span.icon-bakery, span.icon-breakfast, span.icon-drinks, span.icon-soups, span.icon-salads, span.icon-sandwiches, span.icon-salads, span.icon-pasta, span.icon-panera-kids {
+  padding-right: 0.425em;
+  font-size: 2em;
 }
 
 #nav-modal ul.menu-categories li img {
@@ -656,16 +768,16 @@ a#open-nav, #btn-close-modal {
   top: 0.75em;
   left: 0.75em;
   z-index: 500;
-  font-family: "gonzocons";
+  font-family: "panera";
   font-size: 1.5em;
   cursor: pointer;
 }
 
 /* #btn-open-modal.open-nav-modal:after {content: "\e94f";} */    /* Search */
 
-#btn-open-modal.open-nav-modal:after {content: "\e92a";}    /* Hamburger */
+#btn-open-modal.open-nav-modal:after {content: "\e803";}    /* Hamburger */
 
-#btn-close-modal.close-nav-modal:after {content: "\e913";}
+#btn-close-modal.close-nav-modal:after {content: "\e801";}
 
 @media (min-width: 48em) {#nav-modal ul.menu-categories {column-count: 2;}}
 
@@ -768,7 +880,7 @@ nav li a:hover, nav li a:focus {color: #4c753f;}
 /*   display: none; */
   align-items: center;
   position: absolute;
-  right: 5%;
+  right: 1em;
   height: inherit;
 }
 
@@ -783,15 +895,14 @@ nav li a:hover, nav li a:focus {color: #4c753f;}
   opacity: 1;
 }
 
-.name a span.icon-dribbble, .rewards a span.icon-award {
-  margin-top: -0.125em;
+.name a span.icon-my-information, .rewards a span.icon-rewards {
   font-size: 2.5em;
   color: #4c753f;
 }
 
 .rewards {display: none;}
 
-.name a, .rewards a, .name a span.icon-dribbble, .rewards a span.icon-award {
+.name a, .rewards a, .name a span.icon-my-information, .rewards a span.icon-rewards {
   color: #35383d;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
@@ -800,20 +911,20 @@ nav li a:hover, nav li a:focus {color: #4c753f;}
 }
 
 .name a:hover, .name a:focus, .rewards a:hover, .rewards a:focus,
-.name a:hover span.icon-dribbble, .rewards a:hover span.icon-award,
-.name a:focus span.icon-dribbble, .rewards a:focus span.icon-award {color: #4c753f;}
+.name a:hover span.icon-my-information, .rewards a:hover span.icon-rewards,
+.name a:focus span.icon-my-information, .rewards a:focus span.icon-rewards {color: #4c753f;}
 
-.name a.light, .rewards a.light, .name a.light span.icon-dribbble, .rewards a.light span.icon-award {color: #35383d;}
+.name a.light, .rewards a.light, .name a.light span.icon-my-information, .rewards a.light span.icon-rewards {color: #35383d;}
 
 .name a.light:hover, .name a.light:focus, .rewards a.light:hover, .rewards a.light:focus,
-.name a.light:hover span.icon-dribbble, .rewards a.light:hover span.icon-award,
-.name a.light:focus span.icon-dribbble, .rewards a.light:focus span.icon-award {color: #4c753f;}
+.name a.light:hover span.icon-my-information, .rewards a.light:hover span.icon-rewards,
+.name a.light:focus span.icon-my-information, .rewards a.light:focus span.icon-rewards {color: #4c753f;}
 
-.name a.dark, .rewards a.dark, .name a.dark span.icon-dribbble, .rewards a.dark span.icon-award {color: #ffffff;}
+.name a.dark, .rewards a.dark, .name a.dark span.icon-my-information, .rewards a.dark span.icon-rewards {color: #ffffff;}
 
 .name a.dark:hover, .name a.dark:focus, .rewards a.dark:hover, .rewards a.dark:focus,
-.name a.dark:hover span.icon-dribbble, .rewards a.dark:hover span.icon-award,
-.name a.dark:focus span.icon-dribbble, .rewards a.dark:focus span.icon-award {color: #ebebeb;}
+.name a.dark:hover span.icon-my-information, .rewards a.dark:hover span.icon-rewards,
+.name a.dark:focus span.icon-my-information, .rewards a.dark:focus span.icon-rewards {color: #ebebeb;}
 
 @media (min-width: 48em) {
 .name a {padding: 0 1em 0 0;}
@@ -858,7 +969,7 @@ ul.order-setup.expand {
   bottom: 0;
   padding: 2em;
   border-bottom: 1px solid #4c753f;
-  background-color: #7a9c34;
+  background-color: #6b9f62;
 }
 
 ul.order-setup.expand li.mobile {width: 100%;}
@@ -876,7 +987,7 @@ ul.order-setup.expand li.mobile a.btn-order-setup {
   letter-spacing: -0.8px;
   line-height: 1;
 	text-align: left;
-  background-color: #7a9c34;
+  background-color: #6b9f62;
 }
 
 ul.order-setup.expand li.mobile a.btn-order-setup:hover, ul.order-setup.expand li.mobile a.btn-order-setup:focus {color: #35383d;}
@@ -956,7 +1067,7 @@ ul.order-setup.expand {
   height: 6em;
   border-bottom: 1px solid #4c753f;
   font-size: 100%;
-  background-color: #7a9c34;
+  background-color: #6b9f62;
 }
 ul.order-setup.expand li.desktop {border-color: #4c753f;}
 ul.order-setup.expand li.desktop h2 {text-align: left;}}
@@ -971,7 +1082,7 @@ footer {
   width: 100%;
   margin: 0;
   padding: 1em 2em 2em;	
-  background-color: #7a9c34;
+  background-color: #6b9f62;
 }
 
 
@@ -1186,7 +1297,7 @@ footer .connect .social ul {
 footer .connect .social ul li {
 	margin: 0;
 	padding: 0;
-	font-size: 1.5em;
+	font-size: 1.75em;
 	text-align: center;
 }
 
@@ -1254,123 +1365,6 @@ footer .copyright ul li.narrow {padding: 2em 0.5em 0;}
 footer .copyright ul {justify-content: flex-start;}
 footer .copyright ul li.narrow {display: none;}
 footer .copyright ul li.wide {display: block;}}
-
-
-/* ------------------------------------------
-  VERTICAL NAVIGATION
---------------------------------------------- */
-
-#cd-vertical-nav {display: none;}
-
-@media (min-width: 64em) {
-.no-touch #cd-vertical-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  position: fixed;
-  top: 50%;
-  right: 40px;
-  bottom: auto;
-  left: auto;
-  padding: 0;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  z-index: 1;
-}
-.no-touch #cd-vertical-nav.hidden {display: none;}
-.no-touch #cd-vertical-nav ul {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-.no-touch #cd-vertical-nav li {
-  padding: 0;
-  text-align: right;
-}
-.no-touch #cd-vertical-nav a {
-  display: inline-block;
-  /* prevent weird movements on hover when you use a CSS3 transformation - webkit browsers */
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-.no-touch #cd-vertical-nav a:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.no-touch #cd-vertical-nav a span {
-  float: right;
-  display: inline-block;
-  -webkit-transform: scale(0.6);
-  -moz-transform: scale(0.6);
-  -ms-transform: scale(0.6);
-  -o-transform: scale(0.6);
-  transform: scale(0.6);
-}
-.no-touch #cd-vertical-nav a:hover span,
-.no-touch #cd-vertical-nav a:focus span,
-.no-touch #cd-vertical-nav a.is-selected .cd-label {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
-  transform: scale(1);
-}
-.no-touch #cd-vertical-nav a:hover .cd-label,
-.no-touch #cd-vertical-nav a:focus .cd-label,
-.no-touch #cd-vertical-nav a.is-selected .cd-label {opacity: 1;}
-.no-touch #cd-vertical-nav a.is-selected .cd-dot {
-  border: 3px solid #ffffff;
-  background-color: transparent;
-}
-.no-touch #cd-vertical-nav .cd-dot {
-  position: relative;
-  /* we set a top value in order to align the dot with the label. If you change label's font, you may need to change this top value*/
-  top: 0.5em;
-  height: 1em;
-  width: 1em;
-  border-radius: 50%;
-  background-color: #ffffff;
-  -webkit-transition: -webkit-transform 0.2s, background-color 0.5s;
-  -moz-transition: -moz-transform 0.2s, background-color 0.5s;
-  transition: transform 0.2s, background-color 0.5s;
-  -webkit-transform-origin: 50% 50%;
-  -moz-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  -o-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-}
-.no-touch #cd-vertical-nav .cd-dot.light {background-color: #6f6f75;}
-.no-touch #cd-vertical-nav .cd-dot.dark {background-color: #ffffff;}
-.no-touch #cd-vertical-nav a.is-selected .cd-dot.light {
-  border: 3px solid #6f6f75;
-  background-color: transparent;
-}
-.no-touch #cd-vertical-nav a.is-selected .cd-dot.dark {
-  border: 3px solid #ffffff;
-  background-color: transparent;
-}
-.no-touch #cd-vertical-nav .cd-label {
-  position: relative;
-  margin-right: 0.5em;
-  padding: 0.675em 0 0.4em 0;
-  color: #ffffff;
-  font-size: 1em;
-  -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
-  -moz-transition: -moz-transform 0.2s, opacity 0.2s;
-  transition: transform 0.2s, opacity 0.2s;
-  opacity: 0;
-  -webkit-transform-origin: 100% 50%;
-  -moz-transform-origin: 100% 50%;
-  -ms-transform-origin: 100% 50%;
-  -o-transform-origin: 100% 50%;
-  transform-origin: 100% 50%;
-}
-.no-touch #cd-vertical-nav .cd-label.light {color: #6f6f75;}
-.no-touch #cd-vertical-nav .cd-label.dark {color: #ffffff;}}
 
 
 /* ------------------------------------------
@@ -1795,7 +1789,17 @@ blockquote.short {padding: 2em;}}
 .product-details ul li:last-of-type {margin: 0;}
 
 .product-details ul li p {
+  margin-top: 0.25em;
   font-weight: 500;
+  color: #4c753f;
+}
+
+span.icon-plant-forward, span.icon-vegetarian {
+  display: block;
+  font-size: 1.875em;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
   color: #4c753f;
 }
 
@@ -1998,7 +2002,7 @@ blockquote.short {padding: 2em;}}
 }
 
 .profile-header-avatar img {
-  border: 1px solid #7a9c34;
+  border: 1px solid #6b9f62;
   border-radius: 50%;
 }
 
